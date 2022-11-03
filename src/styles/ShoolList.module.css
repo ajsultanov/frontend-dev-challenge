@@ -1,0 +1,24 @@
+.schoolList {
+    width: 420px;
+    height: calc(100% - 260px);
+    top: 260px;
+    overflow: auto;
+    position: fixed;
+}
+
+.maskedOverflow::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.maskedOverflow {
+    scrollbar-width: none; /* Firefox */
+    mask-image: linear-gradient( /* creates mask at top and bottom of element */
+        transparent,
+        black 20px,
+        black calc(100% - 20px),
+        transparent 100%
+    );
+}
+
+.spacer {
+    height: 8px;
+}
